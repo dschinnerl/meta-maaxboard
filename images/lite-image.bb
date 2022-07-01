@@ -14,7 +14,7 @@ IMAGE_FEATURES += " \
     package-management \
 "
 ERPC_COMPS ?= ""
-ERPC_COMPS_append_mx7ulp = "packagegroup-imx-erpc"
+ERPC_COMPS:append:mx7ulp = "packagegroup-imx-erpc"
 
 HANTRO_PKGS = ""
 HANTRO_PKGS_mx8mm = "imx-vpu-hantro-daemon"
@@ -37,9 +37,9 @@ CORE_IMAGE_EXTRA_INSTALL += " \
     ${HANTRO_PKGS} \
 "
 
-CORE_IMAGE_EXTRA_INSTALL_append = " packagegroup-qt5-imx "
+CORE_IMAGE_EXTRA_INSTALL:append = " packagegroup-qt5-imx "
 
-CORE_IMAGE_EXTRA_INSTALL_append = " \
+CORE_IMAGE_EXTRA_INSTALL:append = " \
     gnupg \
     parted \
     v4l-utils \
@@ -62,7 +62,7 @@ CORE_IMAGE_EXTRA_INSTALL_append = " \
     xz \
 "
 
-CORE_IMAGE_EXTRA_INSTALL_append_maaxboardnano = "wifi-service"
+CORE_IMAGE_EXTRA_INSTALL:append:maaxboardnano = "wifi-service"
 
 inherit extrausers
 EXTRA_USERS_PARAMS = "\

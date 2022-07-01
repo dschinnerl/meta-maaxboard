@@ -8,11 +8,11 @@ require conf/machine/include/tune-cortexa53.inc
 
 MACHINE_FEATURES += " pci wifi bluetooth bcm43455"
 
-MACHINE_SOCARCH_FILTER_append_mx8mq = " virtual/libopenvg virtual/libgles1 virtual/libgles2 virtual/egl virtual/mesa virtual/libgl virtual/libg2d"
+MACHINE_SOCARCH_FILTER:append:mx8mq = " virtual/libopenvg virtual/libgles1 virtual/libgles2 virtual/egl virtual/mesa virtual/libgl virtual/libg2d"
 
 KERNEL_DEVICETREE = "freescale/maaxboard-base.dtb"
 
-WKS_FILE_DEPENDS_append = " uenv"
+WKS_FILE_DEPENDS:append = " uenv"
 IMAGE_BOOT_FILES += "uEnv.txt"
 IMAGE_BOOT_FILES += "readme.txt"
 IMAGE_BOOT_FILES += " overlays/*;overlays/"

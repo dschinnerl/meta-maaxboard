@@ -12,7 +12,7 @@ KERNEL_DEVICETREE  = "freescale/maaxboard-mini-mipi.dtb"
 KERNEL_DEVICETREE += "freescale/maaxboard-mini-lvds.dtb"
 KERNEL_DEVICETREE += "freescale/maaxboard-mini-device.dtb"
 
-WKS_FILE_DEPENDS_append = " uenv"
+WKS_FILE_DEPENDS:append = " uenv"
 IMAGE_BOOT_FILES += "uEnv.txt"
 
 UBOOT_CONFIG ??= "sd"

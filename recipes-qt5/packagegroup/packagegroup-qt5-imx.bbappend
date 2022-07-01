@@ -1,5 +1,5 @@
-QT5_IMAGE_INSTALL_remove = " qtbase-examples packagegroup-qt5-demos "
-QT5_IMAGE_INSTALL_append = " \
+QT5_IMAGE_INSTALL:remove = " qtbase-examples packagegroup-qt5-demos "
+QT5_IMAGE_INSTALL:append = " \
     qt3d-dev \
     qt3d-mkspecs \
     qt3d-plugins \
