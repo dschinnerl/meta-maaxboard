@@ -4,7 +4,7 @@ MACHINEOVERRIDES =. "mx8:mx8m:mx8mq:"
 MACHINEOVERRIDES =. "maaxboardbase:maaxboard:"
 
 require conf/machine/include/imx-base.inc
-require conf/machine/include/tune-cortexa53.inc
+require conf/machine/include/arm/armv8a/tune-cortexa53.inc
 
 MACHINE_FEATURES += " pci wifi bluetooth bcm43455"
 
@@ -60,9 +60,9 @@ PREFERRED_PROVIDER_u-boot = "u-boot-imx"
 PREFERRED_VERSION_u-boot-imx = "2021.04"
 
 # meta-fsl-bsp-release/imx/meta-bsp/conf/machine/include/imx-base.inc
-PREFERRED_PROVIDER_virtual/kernel = "linux-imx"
-PREFERRED_VERSION_linux-imx = "5.10%"
-PREFERRED_VERSION_linux-imx-headers = "5.10%"
+#PREFERRED_PROVIDER_virtual/kernel = "linux-imx"
+#PREFERRED_VERSION_linux-imx = "5.10%"
+#PREFERRED_VERSION_linux-imx-headers = "5.10%"
 
 # /etc/hostname
 hostname_pn-base-files = "maaxboard"

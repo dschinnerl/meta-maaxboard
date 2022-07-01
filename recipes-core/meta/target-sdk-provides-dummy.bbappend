@@ -1,3 +1,3 @@
-DUMMYPROVIDES_PACKAGES_remove_maaxboardbase = " \
+DUMMYPROVIDES_PACKAGES:remove:maaxboardbase = " \
     bash \
 "

@@ -1,4 +1,4 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend = "${THISDIR}/files:"
 
 DTS_BOARD_NAME ?= ""
 DTS_BOARD_NAME_maaxboard="avnet,maaxboard"
@@ -26,14 +26,14 @@ az_install_firmware_aw(){
     # install -m 0644 ${WORKDIR}/maaxboard-firmware/NXP_firmware_bt/nxp/wifi_mod_para_sd8987.conf ${D}${nonarch_base_libdir}/firmware/nxp/
 }
 
-do_install_append_maaxboard () {
+do_install:append:maaxboard () {
     az_install_firmware
 }
 
-do_install_append_maaxboardmini () {
+do_install:append:maaxboardmini () {
     az_install_firmware
 }
 
-do_install_append_maaxboardnano () {
+do_install:append:maaxboardnano () {
     az_install_firmware_aw
 }

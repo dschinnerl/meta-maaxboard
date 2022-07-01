@@ -1,14 +1,26 @@
-require recipes-kernel/linux/linux-maaxboard-src-5.10.inc
+#require recipes-kernel/linux/linux-maaxboard-src-5.10.inc
 
-KERNEL_DEF_CONFIG ??= "imx_v8_defconfig"
-KERNEL_DEF_CONFIG_maaxboardnano = "maaxboard_nano_defconfig"
-KERNEL_DEF_CONFIG_maaxboard = "maaxboard_defconfig"
-KERNEL_DEF_CONFIG_maaxboardmini = "maaxboard_mini_defconfig"
-KBUILD_DEFCONFIG_maaxboardnano = "maaxboard_nano_defconfig"
+#KERNEL_DEF_CONFIG ??= "imx_v8_defconfig"
+#KERNEL_DEF_CONFIG_maaxboardnano = "maaxboard_nano_defconfig"
+#KERNEL_DEF_CONFIG_maaxboard = "maaxboard_defconfig"
+#KERNEL_DEF_CONFIG_maaxboardmini = "maaxboard_mini_defconfig"
+#KBUILD_DEFCONFIG_maaxboardnano = "maaxboard_nano_defconfig"
 
-KERNEL_DTC_FLAGS = "-@"
+#KERNEL_DTC_FLAGS = "-@"
 
-do_copy_defconfig_maaxboardbase () {
+DEFAULTTUNE:use-mainline-bsp = "cortexa53-crypto"
+
+MACHINE_FEATURES += "pci wifi bluetooth bcm43455 bcm4356"
+
+# NXP BSP can consume proprietary jailhouse and BCM4359 firmware
+# Since the firmware is not available publicly, and rather distributed
+# under "Proprietary" license - we opt-out from using it in all BSPs
+# and pin it to NXP BSP only
+# OP-TEE is also applicable to NXP BSP, mainline BSP seems not to have
+# a full support for it yet.
+MACHINE_FEATURES:append:use-nxp-bsp = " optee jailhouse bcm4359"
+
+do_copy_defconfig:maaxboardbase () {
     install -d ${B}
     # copy latest imx_v8_defconfig to use for mx8
     mkdir -p ${B}
@@ -50,7 +62,7 @@ KERNEL_DEVICETREE2_maaxboard  = " \
     freescale/overlays/maaxboard-usb0-device.dtbo \
 "
 
-do_compile_append() {
+do_compile:append() {
     if [ -n "${KERNEL_DTC_FLAGS}" ]; then
         export DTC_FLAGS="${KERNEL_DTC_FLAGS}"
     fi
@@ -61,7 +73,7 @@ do_compile_append() {
     done
 }
 
-do_deploy_append(){
+do_deploy:append(){
     install -d ${DEPLOYDIR}/overlays
     cp ${WORKDIR}/build/arch/arm64/boot/dts/freescale/overlays/* ${DEPLOYDIR}/overlays
 }

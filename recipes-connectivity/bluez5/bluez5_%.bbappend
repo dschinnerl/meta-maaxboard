@@ -1,4 +1,4 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend = "${THISDIR}/files:"
 
 SRC_URI += " \
     file://maaxboard-bt \
@@ -6,7 +6,7 @@ SRC_URI += " \
     file://bluetooth.service \
 "
 
-do_install_append() {
+do_install:append() {
     install -d ${D}${sysconfdir}/bluetooth
     # install -d ${D}${sysconfdir}/dbus-1/system.d
 

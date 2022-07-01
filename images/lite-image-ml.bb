@@ -1,6 +1,6 @@
 require images/lite-image.bb
 
-inherit populate_sdk_qt5
+#inherit populate_sdk_qt5
 
 CONFLICT_DISTRO_FEATURES = "directfb"
 
