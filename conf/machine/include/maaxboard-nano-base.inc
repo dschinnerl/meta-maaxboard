@@ -60,4 +60,4 @@ PREFERRED_VERSION_linux-imx = "5.10%"
 PREFERRED_VERSION_linux-imx-headers = "5.10%"
 
 # /etc/hostname
-hostname_pn-base-files = "maaxboard-nano"
+hostname:pn-base-files = "maaxboard-nano"

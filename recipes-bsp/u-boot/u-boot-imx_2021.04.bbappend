@@ -1,4 +1,4 @@
-# FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+# FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 UBOOT_SRC_maaxboardbase = "${MAAXBOARD_GIT_HOST_MIRROR}/uboot-imx.git;protocol=https"
 SRCBRANCH_maaxboardbase = "maaxboard_v2021.04_5.10.35_2.0.0"

@@ -23,7 +23,7 @@ SRC_URI_maaxboardnano = " \
             file://readme.txt \
 "
 
-FILES_${PN} = "/boot"
+FILES:${PN} = "/boot"
 
 do_install () {
     install -d ${D}/boot

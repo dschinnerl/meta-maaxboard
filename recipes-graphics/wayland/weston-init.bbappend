@@ -8,6 +8,6 @@ do_install:append() {
 }
 
 
-FILES_${PN} += "\
+FILES:${PN} += "\
     ${sysconfdir}/systemd/system/multi-user.target.wants/weston.service \
 " 

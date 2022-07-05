@@ -65,4 +65,4 @@ PREFERRED_VERSION_u-boot-imx = "2021.04"
 #PREFERRED_VERSION_linux-imx-headers = "5.10%"
 
 # /etc/hostname
-hostname_pn-base-files = "maaxboard"
+hostname:pn-base-files = "maaxboard"

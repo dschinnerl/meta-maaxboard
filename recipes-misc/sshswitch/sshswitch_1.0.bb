@@ -5,10 +5,10 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/GPL-2.0-only;m
 inherit systemd
 
 SYSTEMD_AUTO_ENABLE = "enable"
-SYSTEMD_SERVICE_${PN} = "sshswitch.service"
+SYSTEMD_SERVICE:${PN} = "sshswitch.service"
 
 SRC_URI += " file://sshswitch.service "
-FILES_${PN} += "${systemd_unitdir}/system/sshswitch.service"
+FILES:${PN} += "${systemd_unitdir}/system/sshswitch.service"
 
 do_install() { 
     install -d ${D}/${systemd_unitdir}/system 
