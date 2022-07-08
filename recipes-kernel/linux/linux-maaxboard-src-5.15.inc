@@ -1,5 +1,8 @@
 KERNEL_BRANCH_maaxboardbase = "maaxboard_5.10.35_2.0.0"
 KERNEL_SRC_maaxboardbase = "git://github.com/Avnet/linux-imx.git;protocol=https"
+KERNEL_BRANCH = "maaxboard_5.10.35_2.0.0"
+KERNEL_SRC = "git://github.com/Avnet/linux-imx.git;protocol=https"
+
 SRC_URI = "${KERNEL_SRC};branch=${KERNEL_BRANCH}"
 
 SRCREV_maaxboardnano = "fefa73c13998cba45abab3a5041fe9fbfbc44c64"

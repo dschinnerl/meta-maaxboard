@@ -66,5 +66,8 @@ CORE_IMAGE_EXTRA_INSTALL:append:maaxboardnano = "wifi-service"
 
 inherit extrausers
 EXTRA_USERS_PARAMS = "\
-    usermod -P avnet root; \
+    usermod -p jKUb0FXDxNPAw root; \
 "
+# avnet11
+# https://www.mail-archive.com/openembedded-core@lists.openembedded.org/msg152274.html
+# https://www.radb.net/crypt_calculator

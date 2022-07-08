@@ -20,8 +20,8 @@ do_install(){
     fi
 }
 
-FILES_${PN} += " \
+FILES:${PN} += " \
     ${systemd_unitdir}/system \
     ${sysconfdir}/wifi/wifi-start \
 "
-RDEPENDS_wifi-service = "bash"
+RDEPENDS:wifi-service = "bash"
