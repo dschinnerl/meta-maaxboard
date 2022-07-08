@@ -58,4 +58,3 @@ PREFERRED_VERSION_linux-imx-headers = "5.4"
 
 # /etc/hostname
 hostname:pn-base-files = "maaxboard-mini"
-

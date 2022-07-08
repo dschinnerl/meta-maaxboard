@@ -16,6 +16,7 @@ SRC_URI_maaxboard = " \
 
 SRC_URI_maaxboardmini = " \
             file://uEnv-mini.txt \
+            file://readme.txt \
 "
 
 SRC_URI_maaxboardnano = " \

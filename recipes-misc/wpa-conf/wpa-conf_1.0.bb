@@ -10,11 +10,11 @@ SYSTEMD_SERVICE:${PN} = "wpa-conf.service"
 SRC_URI += " file://wpa-conf.service "
 FILES:${PN} += "${systemd_unitdir}/system/wpa-conf.service"
 
-do_install() { 
-    install -d ${D}/${systemd_unitdir}/system 
+do_install() {
+    install -d ${D}/${systemd_unitdir}/system
     install -m 0644 ${WORKDIR}/wpa-conf.service ${D}/${systemd_unitdir}/system
 }
 
-do_install:append:maaxboardnano() { 
+do_install:append:maaxboardnano() {
     sed -i "s/wlan/mlan/g" ${D}/${systemd_unitdir}/system/wpa-conf.service
 }

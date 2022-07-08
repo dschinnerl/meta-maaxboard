@@ -7,7 +7,7 @@ FILESEXTRAPATHS:prepend = "${THISDIR}/files:"
 SRC_URI += " file://expand_rootfs "
 FILES:${PN} += "${sbindir}/expand_rootfs"
 
-do_install() { 
+do_install() {
     install -d ${D}/${sbindir}/
     install -m 0755 ${WORKDIR}/expand_rootfs ${D}/${sbindir}/
 }

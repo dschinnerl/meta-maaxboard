@@ -72,7 +72,6 @@ function bbclass_overrides() {
 }
 
 function hook_in_layer() {
-
     layer=$1
     shift
     if [ "$1" = "" ]; then
@@ -118,7 +117,7 @@ function run(){
     # Clean up PATH, because if it includes tokens to current directories somehow,
     # wrong binaries can be used instead of the expected ones during task execution
     export PATH="`echo $PATH | sed 's/\(:.\|:\)*:/:/g;s/^.\?://;s/:.\?$//'`"
-    
+
     cat <<EOF
     Welcome to Freescale Community BSP
 
@@ -134,7 +133,7 @@ function run(){
     Common targets are:
         lite-image
 EOF
-    
+
     hook_in_layer meta-imx/meta-bsp
     hook_in_layer meta-imx/meta-sdk
     hook_in_layer meta-imx/meta-ml
@@ -153,15 +152,15 @@ function start(){
     while getopts "b:h" fsl_setup_flag
     do
         case $fsl_setup_flag in
-            b) 
+            b)
                 BUILD_DIR="$OPTARG";
                 echo -e "\n Build directory is " $BUILD_DIR
                 ;;
-            h) 
+            h)
                 usage
                 exit -1
                 ;;
-            \?) 
+            \?)
                 usage
                 exit -1;;
         esac

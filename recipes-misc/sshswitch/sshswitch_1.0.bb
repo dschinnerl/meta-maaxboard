@@ -10,7 +10,7 @@ SYSTEMD_SERVICE:${PN} = "sshswitch.service"
 SRC_URI += " file://sshswitch.service "
 FILES:${PN} += "${systemd_unitdir}/system/sshswitch.service"
 
-do_install() { 
-    install -d ${D}/${systemd_unitdir}/system 
+do_install() {
+    install -d ${D}/${systemd_unitdir}/system
     install -m 0644 ${WORKDIR}/sshswitch.service ${D}/${systemd_unitdir}/system
 }
