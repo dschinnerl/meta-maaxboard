@@ -1,6 +1,6 @@
 FILESEXTRAPATHS:prepend = "${THISDIR}/files:"
 
-SRC_URI += " \
+SRC_URI:append = " \
     file://${MACHINE}/maaxboard-bt \
     file://maaxboard-bt.service \
     file://bluetooth.service \
