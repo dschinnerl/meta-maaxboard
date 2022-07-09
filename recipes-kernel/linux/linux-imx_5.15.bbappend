@@ -1,6 +1,6 @@
 require recipes-kernel/linux/linux-maaxboard-src-5.15.inc
 
-KERNEL_DEF_CONFIG ??= "imx_v8_defconfig"
+KERNEL_DEF_CONFIG ??= "maaxboard_defconfig"
 #KERNEL_DEF_CONFIG_maaxboardnano = "maaxboard_nano_defconfig"
 #KERNEL_DEF_CONFIG_maaxboard = "maaxboard_defconfig"
 #KERNEL_DEF_CONFIG_maaxboardmini = "maaxboard_mini_defconfig"
