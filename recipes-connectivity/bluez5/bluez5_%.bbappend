@@ -1,4 +1,4 @@
-FILESEXTRAPATHS:prepend = "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 SRC_URI:append = " \
     file://${MACHINE}/maaxboard-bt \
