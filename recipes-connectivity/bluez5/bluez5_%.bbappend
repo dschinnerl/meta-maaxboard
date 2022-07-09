@@ -10,7 +10,7 @@ do_install:append() {
     install -d ${D}${sysconfdir}/bluetooth
     # install -d ${D}${sysconfdir}/dbus-1/system.d
 
-    install -m 0755 ${WORKDIR}/maaxboard-bt ${D}${sysconfdir}/bluetooth
+    install -m 0755 ${WORKDIR}/${MACHINE}/maaxboard-bt ${D}${sysconfdir}/bluetooth
 
     install -d ${D}${systemd_unitdir}/system
     install -d ${D}${sysconfdir}/systemd/system/multi-user.target.wants
