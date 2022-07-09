@@ -1,4 +1,4 @@
-FILESEXTRAPATHS:prepend = "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 DTS_BOARD_NAME ?= ""
 DTS_BOARD_NAME_maaxboard="avnet,maaxboard"
