@@ -6,7 +6,7 @@ KERNEL_DEF_CONFIG ??= "maaxboard_defconfig"
 #KERNEL_DEF_CONFIG_maaxboardmini = "maaxboard_mini_defconfig"
 #KBUILD_DEFCONFIG_maaxboardnano = "maaxboard_nano_defconfig"
 
-#KERNEL_DTC_FLAGS = "-@"
+KERNEL_DTC_FLAGS = "-@"
 
 DEFAULTTUNE:use-mainline-bsp = "cortexa53-crypto"
 
