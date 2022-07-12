@@ -46,7 +46,7 @@ KERNEL_DEVICETREE2_maaxboardnano  = " \
     freescale/overlays/maaxboard-nano-ext-pwm.dtbo \
     freescale/overlays/maaxboard-nano-ov5640.dtbo \
 "
-KERNEL_DEVICETREE2_maaxboard  = " \
+KERNEL_DEVICETREE2 = " \
     freescale/overlays/maaxboard-as0260.dtbo \
     freescale/overlays/maaxboard-dual-display.dtbo \
     freescale/overlays/maaxboard-ext-gpio.dtbo \
