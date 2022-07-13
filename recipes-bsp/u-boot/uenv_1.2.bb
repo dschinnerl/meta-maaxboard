@@ -7,9 +7,7 @@ FILESEXTRAPATHS:prepend = "${THISDIR}/files:"
 
 S = "${WORKDIR}"
 
-SRC_URI = " "
-
-SRC_URI_maaxboard = " \
+SRC_URI = " \
             file://uEnv-mq.txt \
             file://readme.txt \
 "
@@ -28,7 +26,7 @@ FILES:${PN} = "/boot"
 
 do_install () {
     install -d ${D}/boot
-    install -m 0644 ${S}/uEnv-*.txt ${D}/boot/uEnv.txt
+    install -m 0644 ${S}/uEnv-mq.txt ${D}/boot/uEnv.txt
     install -m 0644 ${S}/readme.txt ${D}/boot/readme.txt
 }
 

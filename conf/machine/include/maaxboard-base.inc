@@ -60,9 +60,9 @@ PREFERRED_PROVIDER_u-boot = "u-boot-imx"
 PREFERRED_VERSION_u-boot-imx = "2021.04"
 
 # meta-fsl-bsp-release/imx/meta-bsp/conf/machine/include/imx-base.inc
-#PREFERRED_PROVIDER_virtual/kernel = "linux-imx"
-#PREFERRED_VERSION_linux-imx = "5.10%"
-#PREFERRED_VERSION_linux-imx-headers = "5.10%"
+PREFERRED_PROVIDER_virtual/kernel = "linux-imx"
+#PREFERRED_VERSION_linux-imx = "5.15%"
+#PREFERRED_VERSION_linux-imx-headers = "5.15%"
 
 # /etc/hostname
 hostname:pn-base-files = "maaxboard"

@@ -62,7 +62,7 @@ CORE_IMAGE_EXTRA_INSTALL:append = " \
     xz \
 "
 
-CORE_IMAGE_EXTRA_INSTALL:append:maaxboardnano = "wifi-service"
+# CORE_IMAGE_EXTRA_INSTALL:append:maaxboardnano = "wifi-service"
 
 inherit extrausers
 EXTRA_USERS_PARAMS = "\

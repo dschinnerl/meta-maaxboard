@@ -26,14 +26,14 @@ az_install_firmware_aw() {
     # install -m 0644 ${WORKDIR}/maaxboard-firmware/NXP_firmware_bt/nxp/wifi_mod_para_sd8987.conf ${D}${nonarch_base_libdir}/firmware/nxp/
 }
 
-do_install:append () {
+do_install:append() {
     az_install_firmware
 }
 
-do_install:append:maaxboardmini () {
-    az_install_firmware
-}
+#do_install:append:maaxboardmini () {
+#    az_install_firmware
+#}
 
-do_install:append:maaxboardnano () {
-    az_install_firmware_aw
-}
+#do_install:append:maaxboardnano () {
+#    az_install_firmware_aw
+#}

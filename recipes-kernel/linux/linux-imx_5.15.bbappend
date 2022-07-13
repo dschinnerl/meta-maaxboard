@@ -73,7 +73,7 @@ do_compile:append() {
     done
 }
 
-do_deploy:append(){
+do_deploy:append() {
     install -d ${DEPLOYDIR}/overlays
     cp ${WORKDIR}/build/arch/arm64/boot/dts/freescale/overlays/* ${DEPLOYDIR}/overlays
 }

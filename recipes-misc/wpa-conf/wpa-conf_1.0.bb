@@ -15,6 +15,6 @@ do_install() {
     install -m 0644 ${WORKDIR}/wpa-conf.service ${D}/${systemd_unitdir}/system
 }
 
-do_install:append:maaxboardnano() {
-    sed -i "s/wlan/mlan/g" ${D}/${systemd_unitdir}/system/wpa-conf.service
-}
+#do_install:append:maaxboardnano() {
+#    sed -i "s/wlan/mlan/g" ${D}/${systemd_unitdir}/system/wpa-conf.service
+#}
